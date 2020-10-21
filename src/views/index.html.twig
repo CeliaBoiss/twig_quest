@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Index{% endblock %} 
+{# parent() sert à reprendre le contenu du bloc dans le fichier étendu #}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-4">{{ product }}</div>
+    {% endfor %}
+{% endblock %}
